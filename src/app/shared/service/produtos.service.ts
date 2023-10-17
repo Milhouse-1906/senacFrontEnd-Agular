@@ -1,8 +1,8 @@
+import { ProdutoSeletor } from './../model/seletor/produto.seletor';
 import {HttpClient} from '@angular/common/http';
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
 import { Produto } from '../model/produto';
-import {ProdutoSeletor} from './model/seletor/produto.seletor';
 
 @Injectable({
   providedIn: 'root'

@@ -1,5 +1,6 @@
+import { Produto } from 'src/app/shared/model/produto';
 import { ProdutosService } from './../../shared/service/produtos.service';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-produto-listagem',
@@ -11,9 +12,11 @@ export class ProdutoListagemComponent implements OnInit {
 
   constructor(private produtosService: ProdutosService){
   }
-  gnOnInit(): void{
+
+  ngOnInit(): void{
     this.buscarProdutos();
   }
+
   buscarProdutos(){
     this.produtosService.listarTodos().subscribe(
     resultado =>{
@@ -23,5 +26,9 @@ export class ProdutoListagemComponent implements OnInit {
       console.log('Erro ao buscar produtos', error);
       }
     );
+  }
+
+  editar(id: number){
+    //TODO
   }
 }

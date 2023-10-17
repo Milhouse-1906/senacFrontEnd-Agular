@@ -5,12 +5,28 @@
         <div class = "card-header">
           <h3>Lista de produtos</h3>
         </div>
-            <div>
-             <div>
-               <div>
-
-                </div>
-              </div>
+            <div class="card-body">
+             <div class="table-responsible">
+              <table class="table-responsible">
+                <thead>
+                  <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nome</th>
+                    <th>Ações</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let p of produtos">
+                    <td>{{ p.id}}</td>
+                    <td>{{ p.nome}}</td>
+                    <td>
+                      <button ngTooltip="Editar"class="btn btn-xs btn-info"
+                              (click)="editar(p.id)">Editar
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
