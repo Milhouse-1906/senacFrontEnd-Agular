@@ -1,6 +1,7 @@
 import { Produto } from 'src/app/shared/model/produto';
 import { ProdutosService } from './../../shared/service/produtos.service';
 import { Component, OnInit } from '@angular/core';
+import { ProdutoSeletor } from 'src/app/shared/model/seletor/produto.seletor';
 
 @Component({
   selector: 'app-produto-listagem',
@@ -9,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProdutoListagemComponent implements OnInit {
   public produtos : Array<Produto> = new Array();
+  public seletor: ProdutoSeletor = new ProdutoSeletor();
 
   constructor(private produtosService: ProdutosService){
   }
@@ -31,4 +33,14 @@ export class ProdutoListagemComponent implements OnInit {
   editar(id: number){
     //TODO
   }
+  limpar(){
+
+  }
+  pesquisar(){
+
+  }
+  excluir(id: number){
+
+  }
 }
+
